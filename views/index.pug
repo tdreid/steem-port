@@ -8,7 +8,12 @@ block styles
         crossorigin='anonymous'
       )
 
+block scripts
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/showdown/1.8.6/showdown.min.js')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js')
+  script(src='./js/steem-prop.js' defer='defer')
+        
 block content
-  div(class='container-fluis')
-  h1= title
-  p Welcome to #{title}
+  section(class='row')
+    textarea(class='col-md-6 full-height' id='editor' data-bind='textInput: pad')
+    div(class='col-md-6 full-height' id='preview' data-bind='html: md')
