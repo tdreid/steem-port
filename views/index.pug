@@ -15,5 +15,5 @@ block scripts
         
 block content
   section(class='row')
-    textarea(class='col-md-6 full-height' id='editor' data-bind='textInput: pad')
+    textarea(class='col-md-6 full-height' id='editor' data-bind='textInput: pad, event: {scroll: syncScroll}')
     div(class='col-md-6 full-height' id='preview' data-bind='html: md')
