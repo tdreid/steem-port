@@ -1,9 +1,15 @@
+body {
+    padding-top: 3.5rem;
+}
+
 html, body, section, .full-height {
     height: 100%;
 } 
 
 #editor{
-    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    font-family: "Source Serif Pro", serif;
+    font-size: 120%;
+    line-height: 150%;
     border: none;
     overflow: auto;
     outline: none;
@@ -14,6 +20,33 @@ html, body, section, .full-height {
 }
 
 #preview {
+    font-family: "Source Serif Pro", serif;
+    font-size: 120%;
+    line-height: 150%;
     overflow: auto;
     border-left: 1px solid gray;
+}
+
+#preview h1 {
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#preview h2 {
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#preview h3 {
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#preview h4 {
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#preview h5 {
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#preview h6 {
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
