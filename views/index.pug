@@ -9,6 +9,9 @@ block styles
       )
 
 block scripts
+  script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo' crossorigin='anonymous')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js' integrity='sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ' crossorigin='anonymous')
+  script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js' integrity='sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm' crossorigin='anonymous')
   script(src='https://cdnjs.cloudflare.com/ajax/libs/showdown/1.8.6/showdown.min.js')
   script(src='https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js')
   script(src='./js/steem-prop.js' defer='defer')
@@ -16,7 +19,19 @@ block scripts
 block content
   nav(class='navbar navbar-dark fixed-top bg-dark')
     span(class='navbar-brand') Welcome to Steem-prop
-    button(class='btn btn-primary') Post
+    div(class='dropdown')
+      button(class='btn btn-sm btn-secondary dropdown-toggle' href='#' role='button' id='platformMenu' data-toggle="dropdown" aria-haspopup='true' aria-expanded='false') Switch Platform
+      div(class='dropdown-menu' aria-labelledby='platformMenu')
+        a(class='dropdown-item') Steem
+        a(class='dropdown-item') Testnet
+    div(class='dropdown')
+      button(class='btn btn-sm btn-secondary dropdown-toggle' href='#' role='button' id='accountMenu' data-toggle="dropdown" aria-haspopup='true' aria-expanded='false') Switch Account
+      div(class='dropdown-menu' aria-labelledby='accountMenu')
+        a(class='dropdown-item') Account1
+        a(class='dropdown-item') Account2
+        div(class='dropdown-divider')
+        button(class='dropdown-item') Add Account
+    button(class='btn btn-primary') Post    
   section(class='row')
     textarea(class='col-md-6 full-height' id='editor' data-bind='textInput: pad, event: {scroll: syncScroll}')
     div(class='col-md-6 full-height' id='preview' data-bind='html: md')
