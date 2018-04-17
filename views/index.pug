@@ -19,7 +19,19 @@ block scripts
 block content
   nav(class='navbar navbar-dark fixed-top bg-dark')
     span(class='navbar-brand') Welcome to Steem-prop
-    button(class='btn btn-primary') Post
+    div(class='dropdown')
+      button(class='btn btn-sm btn-secondary dropdown-toggle' href='#' role='button' id='platformMenu' data-toggle="dropdown" aria-haspopup='true' aria-expanded='false') Switch Platform
+      div(class='dropdown-menu' aria-labelledby='platformMenu')
+        a(class='dropdown-item') Steem
+        a(class='dropdown-item') Testnet
+    div(class='dropdown')
+      button(class='btn btn-sm btn-secondary dropdown-toggle' href='#' role='button' id='accountMenu' data-toggle="dropdown" aria-haspopup='true' aria-expanded='false') Switch Account
+      div(class='dropdown-menu' aria-labelledby='accountMenu')
+        a(class='dropdown-item') Account1
+        a(class='dropdown-item') Account2
+        div(class='dropdown-divider')
+        button(class='dropdown-item') Add Account
+    button(class='btn btn-primary') Post    
   section(class='row')
     textarea(class='col-md-6 full-height' id='editor' data-bind='textInput: pad, event: {scroll: syncScroll}')
     div(class='col-md-6 full-height' id='preview' data-bind='html: md')
